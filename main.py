@@ -16,9 +16,10 @@ def simulate(prisoners: list, number_of_iterations: int) -> None:
     success_count = 0
     for i in range(number_of_iterations):
         success_count += prisoners.start_choosing_boxes()
-        print("\nIteration " + str(i + 1) + ": " + str(success_count) + " success out of " + str(number_of_iterations) + " iterations")
+        print(f"\nIteration {i + 1}: {success_count} success out of {number_of_iterations} iterations {success_count / (i + 1) * 100:.2f}% success so far")
     
-    print("\nSuccess rate: " + str(success_count / number_of_iterations * 100) + "%")
+    print(f"\nSuccess rate: {success_count / number_of_iterations * 100}%") 
+
 
 def main() -> int:
     """
@@ -34,7 +35,7 @@ def main() -> int:
     prisoners = Prisoners(number_of_boxes, number_of_prisoners, use_strategy)
 
     simulate(prisoners, number_of_iterations)
-    print("\nSimulation made with " + str(number_of_iterations) + " iterations with " + str(number_of_prisoners) + " prisoners and " + str(number_of_boxes) + " boxes, using strategy: " + str(bool(use_strategy)))
+    print(f"\nSimulation made with {number_of_iterations} iterations with {number_of_prisoners} prisoners and {number_of_boxes} boxes, using strategy: {bool(use_strategy)}")
     print("\nEnd of program.")
     return 0
 

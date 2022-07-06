@@ -29,4 +29,4 @@ This implementation was motivated by Veritasium video (https://youtu.be/iSNsgj1O
 
 # Run the simulation
 
-Run main.py and alter the parameters as you wish
+Run main.py and alter the parameters as you wish. I made a simulation with 400 prisoners, 400 boxes and 10000 iterations and the result was still above 30% of success rate (30.570000000000004% to be precise).

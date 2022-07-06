@@ -37,5 +37,5 @@ class Prisoners:
         for prisoner in self.prisoners:
             success_count += prisoner.try_to_find_box(boxes.copy())
         
-        print(str(success_count) + " out of " + str(self.number_of_prisoners) + " prisoners found the box")
+        print(f" {success_count} out of {self.number_of_prisoners} prisoners found the box")
         return 1 if success_count == self.number_of_prisoners else 0
